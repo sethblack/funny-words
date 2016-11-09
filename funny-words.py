@@ -1,3 +1,9 @@
+#
+# funny-words.py
+# copyright 2016 Seth Black
+# 11/09/2016
+#
+
 import argparse
 import random
 

@@ -90,3 +90,6 @@ ENV/
 
 # MacOS Bleh
 .DS_Store
+
+# setuptools
+MANIFEST

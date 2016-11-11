@@ -9,56 +9,57 @@ import random
 
 # taken from http://marshmallow_666.tripod.com/cgi-bin/
 funny_words = [
-    'aardvark','abacus','abundance','ache','acupuncture','airbrush','alien','anagram','angle','amazing','ankle','alphabet','antenna','aqua','asphalt',
-    'bacon','banana','bangles','banjo','bankrupt','bar','barracuda','basket','beluga','binder','birthday','bisect','blizzard','blunderbuss','boa','bog',
-    'bounce','broomstick','brought','bubble','budgie','bug','bug-a-boo','bugger','buff','burst','butter','buzz','cabana','cake','calculator','camera',
-    'candle','carnival','carpet','casino','cashew','catfish','ceiling','celery','chalet','chalk','chart','cheddar','chesterfield','chicken','chinchill',
-    'chit-chat','chocolate','chowder','coal','compass','compress','computer','conduct','contents','cookie','copper','corduroy','cow','cracker','crackle',
-    'croissant','cube','cupcake','curly','curtain','cushion','cuticle','daffodil','delicious','dictionary','dimple','ding-a-ling','disk',
-    'disco duck','dodo','dolphin','dong','donuts','dork','dracula','duct tape','effigy','egad','elastic','elephant','encasement','erosion','eyelash','fabulous',
-    'fantastic','feather','felafel','fetish','financial','finger','finite','fish','fizzle','fizzy','flame','flash','flavour','flick','flock','flour','flower',
-    'foamy','foot','fork','fritter','fudge','fungus','funny','fuse','fusion','fuzzy','garlic','gelatin','gelato','ghetto','glebe','glitter','glossy','groceries',
-    'goulashes','guacamole','gumdrop','haberdashery','hamster','happy','highlight','hippopotamus','hobbit','hold','hooligan','hydrant','icicles','idiot',
-    'implode','implosion','indeed','issue','itchy','jell-o','jewel','jump','kabob','kasai','kite','kiwi','ketchup','knob','laces','lacy','laughter','laundry',
-    'leaflet','legacy','leprechaun','lollypop','lumberjack','macadamia','magenta','magic','magnanimous','mango','margarine','massimo','mechanical','medicine',
-    'meh','melon','meow','mesh','metric','microphone','minnow','mitten','mozzarella','muck','mumble','mushy','mustache','nanimo','noodle','nostril','nuggets',
-    'oatmeal','oboe','o\'clock','octopus','odour','ointment','olive','optic','overhead','ox','oxen','pajamas','pancake','pansy','paper','paprika','parmesan',
-    'pasta','pattern','pecan','peek-a-boo','pen','pepper','pepperoni','peppermint','perfume','periwinkle','photograph','pie','pierce','pillow','pimple',
-    'pineapple','pistachio','plush','polish','pompom','poodle','pop','popsicle','prism','prospector','prosper','pudding','puppet','puzzle','queer','query',
-    'radish','rainbow','ribbon','rotate','salami','sandwich','saturday','saturn','saxophone','scissors','scooter','scrabbleship','scrunchie','scuffle','shadow',
-    'sickish','silicone','slippery','smash','smooch','smut','snap','snooker','socks','soya','spaghett','sparkle','spatula','spiral','splurge','spoon','sprinkle',
-    'square','squiggle','squirrel','statistics','stuffing','sticky','sugar','sunshine','super','swirl','taffy','tangy','tape','tat','teepee','telephone','television',
-    'thinkable','tip','tofu','toga','trestle','tulip','turnip','turtle','tusks','ultimate','unicycle','unique','uranus','vegetable','waddle','waffle','wallet',
-    'walnut','wagon','window','whatever','whimsical','wobbly','yellow','zap','zebra','zigzag','zip',]
+    u'aardvark', u'abacus', u'abundance', u'ache', u'acupuncture', u'airbrush', u'alien', u'anagram', u'angle', u'amazing', u'ankle', u'alphabet', u'antenna', u'aqua', u'asphalt',
+    'bacon', u'banana', u'bangles', u'banjo', u'bankrupt', u'bar', u'barracuda', u'basket', u'beluga', u'binder', u'birthday', u'bisect', u'blizzard', u'blunderbuss', u'boa', u'bog',
+    'bounce', u'broomstick', u'brought', u'bubble', u'budgie', u'bug', u'bug-a-boo', u'bugger', u'buff', u'burst', u'butter', u'buzz', u'cabana', u'cake', u'calculator', u'camera',
+    'candle', u'carnival', u'carpet', u'casino', u'cashew', u'catfish', u'ceiling', u'celery', u'chalet', u'chalk', u'chart', u'cheddar', u'chesterfield', u'chicken', u'chinchill',
+    'chit-chat', u'chocolate', u'chowder', u'coal', u'compass', u'compress', u'computer', u'conduct', u'contents', u'cookie', u'copper', u'corduroy', u'cow', u'cracker', u'crackle',
+    'croissant', u'cube', u'cupcake', u'curly', u'curtain', u'cushion', u'cuticle', u'daffodil', u'delicious', u'dictionary', u'dimple', u'ding-a-ling', u'disk',
+    'disco duck', u'dodo', u'dolphin', u'dong', u'donuts', u'dork', u'dracula', u'duct tape', u'effigy', u'egad', u'elastic', u'elephant', u'encasement', u'erosion', u'eyelash', u'fabulous',
+    'fantastic', u'feather', u'felafel', u'fetish', u'financial', u'finger', u'finite', u'fish', u'fizzle', u'fizzy', u'flame', u'flash', u'flavour', u'flick', u'flock', u'flour', u'flower',
+    'foamy', u'foot', u'fork', u'fritter', u'fudge', u'fungus', u'funny', u'fuse', u'fusion', u'fuzzy', u'garlic', u'gelatin', u'gelato', u'ghetto', u'glebe', u'glitter', u'glossy', u'groceries',
+    'goulashes', u'guacamole', u'gumdrop', u'haberdashery', u'hamster', u'happy', u'highlight', u'hippopotamus', u'hobbit', u'hold', u'hooligan', u'hydrant', u'icicles', u'idiot',
+    'implode', u'implosion', u'indeed', u'issue', u'itchy', u'jell-o', u'jewel', u'jump', u'kabob', u'kasai', u'kite', u'kiwi', u'ketchup', u'knob', u'laces', u'lacy', u'laughter', u'laundry',
+    'leaflet', u'legacy', u'leprechaun', u'lollypop', u'lumberjack', u'macadamia', u'magenta', u'magic', u'magnanimous', u'mango', u'margarine', u'massimo', u'mechanical', u'medicine',
+    'meh', u'melon', u'meow', u'mesh', u'metric', u'microphone', u'minnow', u'mitten', u'mozzarella', u'muck', u'mumble', u'mushy', u'mustache', u'nanimo', u'noodle', u'nostril', u'nuggets',
+    'oatmeal', u'oboe', u'o\'clock', u'octopus', u'odour', u'ointment', u'olive', u'optic', u'overhead', u'ox', u'oxen', u'pajamas', u'pancake', u'pansy', u'paper', u'paprika', u'parmesan',
+    'pasta', u'pattern', u'pecan', u'peek-a-boo', u'pen', u'pepper', u'pepperoni', u'peppermint', u'perfume', u'periwinkle', u'photograph', u'pie', u'pierce', u'pillow', u'pimple',
+    'pineapple', u'pistachio', u'plush', u'polish', u'pompom', u'poodle', u'pop', u'popsicle', u'prism', u'prospector', u'prosper', u'pudding', u'puppet', u'puzzle', u'queer', u'query',
+    'radish', u'rainbow', u'ribbon', u'rotate', u'salami', u'sandwich', u'saturday', u'saturn', u'saxophone', u'scissors', u'scooter', u'scrabbleship', u'scrunchie', u'scuffle', u'shadow',
+    'sickish', u'silicone', u'slippery', u'smash', u'smooch', u'snap', u'snooker', u'socks', u'soya', u'spaghett', u'sparkle', u'spatula', u'spiral', u'splurge', u'spoon', u'sprinkle',
+    'square', u'squiggle', u'squirrel', u'statistics', u'stuffing', u'sticky', u'sugar', u'sunshine', u'super', u'swirl', u'taffy', u'tangy', u'tape', u'tat', u'teepee', u'telephone', u'television',
+    'thinkable', u'tip', u'tofu', u'toga', u'trestle', u'tulip', u'turnip', u'turtle', u'tusks', u'ultimate', u'unicycle', u'unique', u'uranus', u'vegetable', u'waddle', u'waffle', u'wallet',
+    'walnut', u'wagon', u'window', u'whatever', u'whimsical', u'wobbly', u'yellow', u'zap', u'zebra', u'zigzag', u'zip',
+    ]
 
-def pick_not_word(word=''):
+def pick_funny_word(but_not=u''):
     funny_word = random.choice(funny_words)
 
-    while funny_word == word:
+    while funny_word == but_not:
         funny_word = random.choice(funny_words)
 
     return funny_word
 
-def pick_n_gram(words=2, join=' '):
-    previous_words = ''
+def build_n_gram(words=2, join_with=u' '):
+    previous_words = u''
     local_funny_words = []
 
     for i in xrange(words):
-        new_funny_word = pick_not_word()
+        new_funny_word = pick_funny_word()
 
         while new_funny_word in previous_words:
-            new_funny_word = pick_not_word()
+            new_funny_word = pick_funny_word()
 
         local_funny_words.append(new_funny_word)
 
-    return join.join(local_funny_words)
+    return join_with.join(local_funny_words)
 
 def run():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-n', '--number', help='how many lines of funny words to generate', type=int, default='1')
-    parser.add_argument('-w', '--words', help='how many funny words to generate per line', type=int, default='2')
-    parser.add_argument('-d', '--delimiter', help='what to put between the funny words', type=str, default=' ')
+    parser.add_argument(u'-w', u'--words', help=u'how many funny words to generate per line', type=int, default=2)
+    parser.add_argument(u'-n', u'--number', help=u'how many lines of funny words to generate', type=int, default=1)
+    parser.add_argument(u'-d', u'--delimiter', help=u'what to put between the funny words', type=str, default=u' ')
     args = parser.parse_args()
 
     for n in xrange(args.number):
-        print pick_n_gram(args.words, args.delimiter)
+        print build_n_gram(args.words, args.delimiter)

@@ -7,7 +7,7 @@ setup(
     include_package_data=True,
     author='Seth Black',
     author_email='sblack@sethserver.com',
-    url='www.sethserver.com',
+    url='https://github.com/sethblack/funny-words',
     scripts=['funny-words'],
     classifiers=[
         'Development Status :: 4 - Beta',

@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='funny-words',
-    version='1.2',
+    version='1.3',
     packages=['funny_words'],
     author='Seth Black',
     author_email='sblack@sethserver.com',

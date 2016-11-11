@@ -1,5 +1,5 @@
 #
-# funny-words.py
+# funny-words
 # copyright 2016 Seth Black
 # 11/09/2016
 #
@@ -31,7 +31,7 @@ funny_words = [
     'thinkable','tip','tofu','toga','trestle','tulip','turnip','turtle','tusks','ultimate','unicycle','unique','uranus','vegetable','waddle','waffle','wallet',
     'walnut','wagon','window','whatever','whimsical','wobbly','yellow','zap','zebra','zigzag','zip',]
 
-def pick_not_word(word):
+def pick_not_word(word=''):
     funny_word = random.choice(funny_words)
 
     while funny_word == word:
@@ -39,14 +39,27 @@ def pick_not_word(word):
 
     return funny_word
 
-if __name__ == '__main__':
+def pick_n_gram(n=2, join=' '):
+    previous_words = ''
+    local_funny_words = []
+
+    for i in xrange(n):
+        new_funny_word = pick_not_word()
+
+        while new_funny_word in previous_words:
+            new_funny_word = pick_not_word()
+
+        local_funny_words.append(new_funny_word)
+
+    return join.join(local_funny_words)
+
+def run():
     parser = argparse.ArgumentParser()
-    parser.add_argument("number", help="how many pairs of funny words to generate", type=int, default='1')
+    parser.add_argument('-n', '--number', help='how many pairs of funny words to generate', type=int, default='1')
     args = parser.parse_args()
 
     for n in xrange(args.number):
-        word_one = pick_not_word('')
+        word_one = pick_not_word()
         word_two = pick_not_word(word_one)
 
         print "{}-{}".format(word_one, word_two)
-    

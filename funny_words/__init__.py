@@ -39,11 +39,11 @@ def pick_not_word(word=''):
 
     return funny_word
 
-def pick_n_gram(n=2, join=' '):
+def pick_n_gram(words=2, join=' '):
     previous_words = ''
     local_funny_words = []
 
-    for i in xrange(n):
+    for i in xrange(words):
         new_funny_word = pick_not_word()
 
         while new_funny_word in previous_words:
@@ -55,11 +55,10 @@ def pick_n_gram(n=2, join=' '):
 
 def run():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-n', '--number', help='how many pairs of funny words to generate', type=int, default='1')
+    parser.add_argument('-n', '--number', help='how many lines of funny words to generate', type=int, default='1')
+    parser.add_argument('-w', '--words', help='how many funny words to generate per line', type=int, default='2')
+    parser.add_argument('-d', '--delimiter', help='what to put between the funny words', type=str, default=' ')
     args = parser.parse_args()
 
     for n in xrange(args.number):
-        word_one = pick_not_word()
-        word_two = pick_not_word(word_one)
-
-        print "{}-{}".format(word_one, word_two)
+        print pick_n_gram(args.words, args.delimiter)

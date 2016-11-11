@@ -2,9 +2,8 @@ from distutils.core import setup
 
 setup(
     name='funny-words',
-    version='1.1',
+    version='1.2',
     packages=['funny_words'],
-    include_package_data=True,
     author='Seth Black',
     author_email='sblack@sethserver.com',
     url='https://github.com/sethblack/funny-words',

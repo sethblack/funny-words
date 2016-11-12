@@ -76,18 +76,10 @@ def pick_funny_word(but_not=u''):
 
 
 def build_n_gram(words=2, join_with=u' '):
-    previous_words = u''
-    local_funny_words = []
-
-    for i in xrange(words):
-        new_funny_word = pick_funny_word()
-
-        while new_funny_word in previous_words:
-            new_funny_word = pick_funny_word()
-
-        local_funny_words.append(new_funny_word)
-
-    return join_with.join(local_funny_words)
+    # Special thanks to /u/finlay_mcwalter for thinking through this problem
+    # way too much!
+    # https://www.reddit.com/r/Python/comments/5cexrm/just_released_the_tool_we_use_at_atlas_wearables/d9w1123/
+    return join_with.join(random.sample(funny_words, words))
 
 
 def run():

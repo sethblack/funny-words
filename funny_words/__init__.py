@@ -3,7 +3,7 @@
 # copyright 2016 Seth Black
 # 11/09/2016
 #
-
+import __future__
 import argparse
 import random
 
@@ -104,5 +104,5 @@ def run():
             default=u' ')
     args = parser.parse_args()
 
-    for n in xrange(args.number):
-        print build_n_gram(args.words, args.delimiter)
+    for n in range(args.number):
+        print (build_n_gram(args.words, args.delimiter))

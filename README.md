@@ -69,7 +69,7 @@ smash,haberdashery,angle
 If you feel the need to use this in a scripted fashion within Python, you most certainly can. The funny_word library that comes with funny-word gives you everything you need to generate funny words on-the-fly.
 
 ```python
->>> from funny_words import pick_funny_word
->>> pick_funny_word()
+>>> from funny_words import build_n_gram
+>>> build_n_gram()
 u'chesterfield'
 ```

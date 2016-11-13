@@ -65,22 +65,11 @@ funny_words = [
     u'whimsical', u'wobbly', u'yellow', u'zap', u'zebra', u'zigzag', u'zip',
     ]
 
-
-def pick_funny_word(but_not=u''):
-    funny_word = random.choice(funny_words)
-
-    while funny_word == but_not:
-        funny_word = random.choice(funny_words)
-
-    return funny_word
-
-
 def build_n_gram(words=2, join_with=u' '):
     # Special thanks to /u/finlay_mcwalter for thinking through this problem
     # way too much!
     # https://www.reddit.com/r/Python/comments/5cexrm/just_released_the_tool_we_use_at_atlas_wearables/d9w1123/
     return join_with.join(random.sample(funny_words, words))
-
 
 def run():
     parser = argparse.ArgumentParser()
